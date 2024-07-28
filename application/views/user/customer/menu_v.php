@@ -74,15 +74,19 @@
         </h2>
       </div>
 
+      
       <ul class="filters_menu">
         <li class="active" data-filter="*">All</li>
-        <?php foreach ($kategoris as $key => $kategori) { ?>
-            <li data-filter=".<?= $kategori->id ?>"><?= $kategori->nama ?></li>
+        <?php if(isset($kategoris)){ ?>
+          <?php foreach ($kategoris as $key => $kategori) { ?>
+              <li data-filter=".<?= $kategori->id ?>"><?= $kategori->nama ?></li>
+          <?php } ?>
         <?php } ?>
       </ul>
 
     <div class="filters-content">
         <div class="row grid">
+        <?php if(isset($produks)){ ?>
             <?php foreach ($produks as $key => $produk) { ?>
                 <div class="col-sm-6 col-lg-4 all <?= $produk->kategori_id ?>">
                     <div class="box">
@@ -152,6 +156,7 @@
                     </div>
                 </div>
             <?php } ?>
+          <?php } ?>
         </div>
     </div>
 
