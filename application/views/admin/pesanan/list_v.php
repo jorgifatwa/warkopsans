@@ -79,6 +79,7 @@
             </div>
           </div>
           <div class="row" id="data-produk">
+            <?php if(!empty($data_produks)){ ?>
             <?php foreach ($data_produks as $key => $produk) { ?>
             <div class="col-md-4">
               <div class="card" style="width: 18rem; height: 28rem;">
@@ -103,6 +104,7 @@
                 </div>
               </div>
             </div>
+          <?php } ?>
           <?php } ?>
           </div>
         </div>
